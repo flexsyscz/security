@@ -1,0 +1,22 @@
+parameters:
+	resourcesDir: ../Resources/
+
+extensions:
+	autoloader: Flexsyscz\Security\FirewallExtension
+
+
+firewall:
+	requestsPerSecond: 8
+	blacklist:
+		ranges:
+			- 192.168.88.0/24
+		remoteAddresses:
+			- 192.168.1.1
+	whitelist:
+		ranges:
+			- 192.168.88.0/28
+		remoteAddresses:
+			- 192.168.88.6
+
+services:
+	- Tests\Resources\TestClass
