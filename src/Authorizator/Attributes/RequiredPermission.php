@@ -8,7 +8,7 @@ use Attribute;
 
 
 #[Attribute]
-class Privilege
+class RequiredPermission
 {
 	public function __construct(...$params)
 	{

@@ -12,8 +12,8 @@
 	],
 	"require": {
 		"php": ">=8.1",
-		"flexsyscz/application": "dev-master",
-		"flexsyscz/model": "@dev",
+		"flexsyscz/application": "^1.0",
+		"flexsyscz/model": "^2.0",
 		"tracy/tracy": "^2.10",
 		"nette/utils": "^4.0",
 		"nette/security": "^3.2",

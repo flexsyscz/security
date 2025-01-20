@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Flexsyscz\Security\Authorizator\Traits;
 
-use Flexsyscz\Security\Authorizator\Attributes\Privilege;
+use Flexsyscz\Security\Authorizator\Attributes\RequiredPermission;
 use Flexsyscz\Security\Authorizator\Permission;
 use Nette\InvalidStateException;
 
@@ -27,7 +27,7 @@ trait AccessControlList
 			$user = $this->getUser();
 			if ($user->isLoggedIn()) {
 				if (method_exists($element, 'getAttributes')) {
-					$attributes = $element->getAttributes(Privilege::class);
+					$attributes = $element->getAttributes(RequiredPermission::class);
 					foreach ($attributes as $attribute) {
 						foreach ($attribute->getArguments() as $argument) {
 							foreach ($this->getUser()->getRoles() as $role) {
