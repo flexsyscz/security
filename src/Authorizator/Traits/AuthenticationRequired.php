@@ -7,7 +7,7 @@ namespace Flexsyscz\Security\Authorizator\Traits;
 
 trait AuthenticationRequired
 {
-	public function checkPermissions($element): bool
+	public function checkPermissions(mixed $element): bool
 	{
 		return $this->getUser()->isLoggedIn();
 	}

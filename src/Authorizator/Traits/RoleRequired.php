@@ -9,7 +9,7 @@ use Flexsyscz\Security\Authorizator\Attributes\AllowedRole;
 
 trait RoleRequired
 {
-	public function checkPermissions($element): bool
+	public function checkPermissions(mixed $element): bool
 	{
 		$user = $this->getUser();
 		if ($user->isLoggedIn()) {
