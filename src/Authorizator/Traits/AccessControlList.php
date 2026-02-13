@@ -51,4 +51,17 @@ trait AccessControlList
 
 		return $this->authorized;
 	}
+
+
+	public function isAuthorized(): bool
+	{
+		return $this->authorized;
+	}
+
+
+	public function setAuthorized(bool $authorized): self
+	{
+		$this->authorized = $authorized;
+		return $this;
+	}
 }
