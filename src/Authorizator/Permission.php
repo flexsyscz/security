@@ -14,7 +14,7 @@ class Permission extends Nette\Security\Permission
 		$loader = new Nette\Loaders\RobotLoader();
 		$loader->addDirectory($appDir)
 			->setTempDirectory($tempDir)
-			->setAutoRefresh();
+			->setAutoRefresh(false);
 
 		$loader->rebuild();
 
