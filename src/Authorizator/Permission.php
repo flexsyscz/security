@@ -22,9 +22,8 @@ class Permission extends Nette\Security\Permission
 		$loader = new Nette\Loaders\RobotLoader();
 		$loader->addDirectory($appDir)
 			->setTempDirectory($tempDir)
-			->setAutoRefresh(false);
-
-		$loader->rebuild();
+			->setAutoRefresh(false)
+			->register();
 
 		foreach (array_keys($loader->getIndexedClasses()) as $className) {
 			if (($interfaces = class_implements($className))) {
